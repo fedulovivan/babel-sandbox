@@ -15,7 +15,7 @@
     // Import non-ES modules as default imports.
     "esModuleInterop": true,
     // "typeRoots": [ "node_modules/@types" ],
-    // "jsx": "react",
+    "jsx": "react",
     "baseUrl": ".",
     // "paths": {
     //     "src/*": ["src/*"],
