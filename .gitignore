@@ -1,17 +1,9 @@
 # misc in root
-.idea
 .svn
 .vscode
 .DS_Store
-frontend.zip
 yarn-error.log
 
 # entire dirs
-WebContent
-node_modules
-logs
-addons/
-static/dist
-static/plugins
-static/js/pages/analytics/contextMarketing/node_modules
-static/css/themes
+dist/
+node_modules/

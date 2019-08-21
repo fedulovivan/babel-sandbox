@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n\nconsole.log(Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"camelCase\"])(\n/* 'foo' */\n1));\n\n//# sourceURL=webpack:///./src/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n\nconsole.log(Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"camelCase\"])('foo'));\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _uti
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"camelCase\", function() { return camelCase; });\nfunction camelCase(value) {\n  return `${value} => ${value.toUpperCase()}`;\n}\n\n//# sourceURL=webpack:///./src/utils.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"camelCase\", function() { return camelCase; });\nfunction camelCase(value) {\n  if (!value) return;\n  return `${value} => ${value.toUpperCase()}`;\n}\n\n//# sourceURL=webpack:///./src/utils.ts?");
 
 /***/ })
 

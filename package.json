@@ -8,7 +8,8 @@
     "webpack": "webpack --mode development --watch",
     "launch": "node dist/main.js",
     "all": "yarn build && yarn launch",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "lint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {},
   "devDependencies": {
