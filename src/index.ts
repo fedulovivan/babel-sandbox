@@ -1,3 +1,3 @@
 import { camelCase } from './utils'
 
-console.log(camelCase('foo'));
+console.log(camelCase(/* 'foo' */1));

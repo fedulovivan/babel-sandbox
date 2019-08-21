@@ -81,32 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.tsx");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/index.tsx":
-/*!***********************!*\
-  !*** ./src/index.tsx ***!
-  \***********************/
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils.tsx\");\n\nconsole.log(Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"camelCase\"])('foo'));\n\n//# sourceURL=webpack:///./src/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/utils.ts\");\n\nconsole.log(Object(_utils__WEBPACK_IMPORTED_MODULE_0__[\"camelCase\"])(\n/* 'foo' */\n1));\n\n//# sourceURL=webpack:///./src/index.ts?");
 
 /***/ }),
 
-/***/ "./src/utils.tsx":
-/*!***********************!*\
-  !*** ./src/utils.tsx ***!
-  \***********************/
+/***/ "./src/utils.ts":
+/*!**********************!*\
+  !*** ./src/utils.ts ***!
+  \**********************/
 /*! exports provided: camelCase */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"camelCase\", function() { return camelCase; });\nfunction camelCase(value) {\n  return `${value} => ${value.toUpperCase()}`;\n}\n\n//# sourceURL=webpack:///./src/utils.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"camelCase\", function() { return camelCase; });\nfunction camelCase(value) {\n  return `${value} => ${value.toUpperCase()}`;\n}\n\n//# sourceURL=webpack:///./src/utils.ts?");
 
 /***/ })
 

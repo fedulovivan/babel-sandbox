@@ -1,5 +1,5 @@
 {
 	"presets": [
-			"@babel/typescript"
+		"@babel/typescript"
 	]
 }
