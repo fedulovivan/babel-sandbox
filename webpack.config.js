@@ -1,18 +1,24 @@
-const path = require("path");
+const path = require('path');
 module.exports = {
-    entry: "./src/index.ts",
+    entry: './src/index.ts',
     output: {
-        path: path.join(__dirname, "./dist"),
-        filename: "main.js"
+        path: path.join(__dirname, './dist'),
+        filename: 'main.js'
     },
     module: {
         rules: [{
             test: /\.(js|jsx|ts|tsx)$/,
             exclude: /node_modules/,
-            use: ["babel-loader"]
-        }]
+            use: ['babel-loader']
+        },{
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
+        },{
+            test: /\.styl$/,
+            use: ['style-loader', 'css-loader', 'stylus-loader']
+        }],
     },
     resolve: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"]
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
     },
 }

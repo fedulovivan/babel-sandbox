@@ -1,10 +1,10 @@
 import { camelCase } from './utils'
 import ReactDOMServer from 'react-dom/server';
 import ReactDOM from 'react-dom';
-import Counter from './react/Counter';
+import App from './react/App';
 import React from 'react';
 
-const componentInstance = React.createElement(Counter, { startFrom: 10 })
+const componentInstance = React.createElement(App, { startFrom: 10 })
 
 // invoke a simple function
 console.log(camelCase('foo'));
