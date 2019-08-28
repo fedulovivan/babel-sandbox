@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 
+import Foo from './Foo';
+
 import './App.styl';
 
 // custom wrappers over jointjs
@@ -33,6 +35,8 @@ export default function App(props: ComponentProps): React.ReactElement {
             <Button id="dec" onClick={handleClick}>Dec</Button>
             <Input type="number" value={counter} onChange={handleChange}></Input>
             <Button id="inc" onClick={handleClick}>Inc</Button>
+
+            <Foo value="FC.value" />
 
             {/*
             1. pass graph elements via props

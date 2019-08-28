@@ -12,7 +12,13 @@ import {
 
 import './ProjectStorm.styl';
 
-export default function ProjectStorm() {
+interface ComponentProps {
+    value: string;
+    onChange: () => {};
+}
+
+const ProjectStorm: React.FC<ComponentProps> = (props: ComponentProps) => {
+
 
     const engine = createEngine();
     const node1 = new DefaultNodeModel({
@@ -33,5 +39,9 @@ export default function ProjectStorm() {
     model.addAll(node1, node2, link);
     engine.setModel(model);
 
-    return (<CanvasWidget engine={engine} className="canvasWidget" />);
+    return (
+        <CanvasWidget engine={engine} className="canvasWidget" />
+    );
 }
+
+export default ProjectStorm;
