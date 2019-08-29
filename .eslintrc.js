@@ -11,6 +11,8 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
     ],
     env: {
+        amd: true,
+        node: true,
         browser: true,
         es6: true
     },
@@ -23,7 +25,7 @@ module.exports = {
         sourceType: "module"
     },
     rules: {
-
+        // TODO
     },
     settings: {
         react: {

@@ -21,7 +21,6 @@ if (typeof window !== 'undefined') {
     console.log(string);
 }
 
-
 // import { camelCase } from './utils'
 // import ReactDOMServer from 'react-dom/server';
 // import ReactDOM from 'react-dom';

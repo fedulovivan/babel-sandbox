@@ -4,15 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode development",
-    "watch": "webpack --mode development --watch",
-    "launch": "node dist/main.js",
-    "all": "yarn build && yarn launch",
-    "tsc": "tsc",
-    "lint": "eslint . --ext .ts,.tsx",
-    "serve": "http-server public"
+    "webpack:build": "webpack --mode development",
+    "webpack:watch": "webpack --mode development --watch",
+    "all": "yarn webpack:build && yarn compiled:server-side",
+    "compiled:server-side": "node dist/main.js",
+    "compiled:client-side": "http-server public",
+    "linter:tsc": "tsc",
+    "linter:eslint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
     "@material-ui/core": "^4.3.2",
@@ -20,6 +22,7 @@
     "closest": "^0.0.1",
     "dagre": "^0.8.4",
     "jointjs": "^3.0.4",
+    "koa": "^2.8.1",
     "lodash": "^4.17.15",
     "mathjs": "^6.1.0",
     "pathfinding": "^0.4.18",
@@ -28,10 +31,12 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@types/backbone": "^1.4.1",
+    "@types/koa": "^2.0.49",
     "@types/lodash": "^4.14.137",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
