@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
-
 import Foo from './Foo';
+import { hot } from 'react-hot-loader/root';
 
 import './App.styl';
 
 // custom wrappers over jointjs
-import Joint from './Joint/Joint';
-import Rectangle from './Joint/Rectangle/Rectangle';
-import Link from './Joint/Link/Link';
-
-import ProjectStorm from './ProjectStorm/ProjectStorm';
+// import Joint from './Joint/Joint';
+// import Rectangle from './Joint/Rectangle/Rectangle';
+// import Link from './Joint/Link/Link';
+// import ProjectStorm from './ProjectStorm/ProjectStorm';
 
 interface ComponentProps {
     startFrom: number;
 }
 
-export default function App(props: ComponentProps): React.ReactElement {
+function App(props: ComponentProps): React.ReactElement {
 
     const [counter, setCounter] = useState(props.startFrom);
 
@@ -36,7 +35,7 @@ export default function App(props: ComponentProps): React.ReactElement {
             <Input type="number" value={counter} onChange={handleChange}></Input>
             <Button id="inc" onClick={handleClick}>Inc</Button>
 
-            <Foo value="FC.value" />
+            <Foo value="FC.value20" />
 
             {/*
             1. pass graph elements via props
@@ -58,7 +57,13 @@ export default function App(props: ComponentProps): React.ReactElement {
             */}
 
             {/* playing with react-diagrams */}
-            <ProjectStorm />
+            {/* <ProjectStorm /> */}
         </div>
     );
 }
+
+App.defaultProps = {
+    startFrom: 11,
+}
+
+export default hot(App);

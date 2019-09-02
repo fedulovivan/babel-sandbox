@@ -1,6 +1,14 @@
 const path = require('path');
+const webpack = require('webpack');
 module.exports = {
-    entry: "./src/index.tsx",
+    mode: 'development',
+    entry: [
+        // 'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
+        // 'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
+        // 'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
+        'webpack-hot-middleware/client',
+        "./src/index.tsx"
+    ],
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'main.js'
@@ -19,6 +27,10 @@ module.exports = {
         }],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        modules: [ path.join(__dirname, 'node_modules') ]
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 }

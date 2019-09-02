@@ -6,21 +6,20 @@
   "scripts": {
     "webpack:build": "webpack --mode development",
     "webpack:watch": "webpack --mode development --watch",
+    "webpack:dev": "node webpack-dev-server.js",
     "all": "yarn webpack:build && yarn compiled:server-side",
     "compiled:server-side": "node dist/main.js",
-    "compiled:client-side": "http-server public",
+    "serve": "http-server public",
     "linter:tsc": "tsc",
     "linter:eslint": "eslint . --ext .ts,.tsx"
   },
   "dependencies": {
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
-    "@emotion/core": "^10.0.16",
-    "@emotion/styled": "^10.0.15",
     "@material-ui/core": "^4.3.2",
-    "@projectstorm/react-diagrams": "^6.0.1-beta.2",
     "closest": "^0.0.1",
     "dagre": "^0.8.4",
+    "express": "^4.17.1",
     "jointjs": "^3.0.4",
     "koa": "^2.8.1",
     "lodash": "^4.17.15",
@@ -40,6 +39,7 @@
     "@types/lodash": "^4.14.137",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "@types/webpack-env": "^1.14.0",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "babel-loader": "^8.0.6",
@@ -47,11 +47,14 @@
     "eslint": "^6.2.1",
     "eslint-plugin-react": "^7.14.3",
     "http-server": "^0.11.1",
+    "react-hot-loader": "^4.12.12",
     "style-loader": "^1.0.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "typescript": "^3.5.3",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0"
   }
 }
