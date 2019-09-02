@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
+import React, { /* useState */ } from 'react';
+// import Input from '@material-ui/core/Input';
+// import Button from '@material-ui/core/Button';
 import Foo from './Foo';
 import { hot } from 'react-hot-loader/root';
 
@@ -18,24 +18,24 @@ interface ComponentProps {
 
 function App(props: ComponentProps): React.ReactElement {
 
-    const [counter, setCounter] = useState(props.startFrom);
+    // const [counter, setCounter] = useState(props.startFrom);
 
-    function handleClick(event: React.MouseEvent<HTMLButtonElement>): void {
-        setCounter(counter + (event.currentTarget.id === 'inc' ? 1 : -1));
-    }
+    // function handleClick(event: React.MouseEvent<HTMLButtonElement>): void {
+    //     setCounter(counter + (event.currentTarget.id === 'inc' ? 1 : -1));
+    // }
 
-    function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
-        setCounter(parseInt(event.currentTarget.value, 10));
-    }
+    // function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
+    //     setCounter(parseInt(event.currentTarget.value, 10));
+    // }
 
     return (
         <div className="root">
-
-            <Button id="dec" onClick={handleClick}>Dec</Button>
-            <Input type="number" value={counter} onChange={handleChange}></Input>
+{/*
             <Button id="inc" onClick={handleClick}>Inc</Button>
+            <Input type="number" value={counter} onChange={handleChange}></Input>
+            <Button id="dec" onClick={handleClick}>Dec</Button> */}
 
-            <Foo value="FC.value20" />
+            <Foo value="FC.444" />
 
             {/*
             1. pass graph elements via props
@@ -63,7 +63,7 @@ function App(props: ComponentProps): React.ReactElement {
 }
 
 App.defaultProps = {
-    startFrom: 11,
+    startFrom: 111,
 }
 
 export default hot(App);

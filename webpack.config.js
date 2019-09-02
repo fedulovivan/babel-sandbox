@@ -1,17 +1,17 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
     mode: 'development',
     entry: [
-        // 'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
-        // 'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
-        // 'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
-        'webpack-hot-middleware/client',
+        'react-hot-loader/patch', // Adding React Hot Loader to preserve component state
+        'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
         "./src/index.tsx"
     ],
     output: {
         path: path.join(__dirname, './dist'),
-        filename: 'main.js'
+        filename: 'main.js',
+        publicPath: 'http://localhost:3000/dist/',
     },
     module: {
         rules: [{
@@ -28,9 +28,14 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        modules: [ path.join(__dirname, 'node_modules') ]
+        modules: [ path.join(__dirname, 'node_modules') ],
+        // alias: { 'react-dom': '@hot-loader/react-dom'  },
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    devServer: {
+        publicPath: 'http://localhost:3000/dist/',
+        headers: { 'Access-Control-Allow-Origin': '*' },
+    },
 }
